@@ -34,6 +34,26 @@
       "sizes": "512x512"
     }
   ],
+  "screenshots": [
+    {
+      "src": "screenshot-tall.png",
+      "type": "image/png",
+      "sizes": "320x480",
+      "form_factor": "tall"
+    },
+    {
+      "src": "screenshot-wide.png",
+      "type": "image/png",
+      "sizes": "480x320",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-square.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "square"
+    }
+  ],
   "start_url": "/",
   "background_color": "#ffffff",
   "display": "standalone",
