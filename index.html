@@ -40,8 +40,8 @@
             }
         }
 
-        // Event listener for input box
-        document.getElementById('name-input').addEventListener('input', function() {
+        // Event listener for input box to update local storage on blur
+        document.getElementById('name-input').addEventListener('blur', function() {
             var userName = this.value.trim(); // Get user's input and trim whitespace
             if (userName) {
                 localStorage.setItem('name', userName); // Save name to Local Storage
