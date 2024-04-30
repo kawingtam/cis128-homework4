@@ -42,8 +42,8 @@
       "src": "icon512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "form_factor": "any",
-      "label": "Icon 512x512"
+      "form_factor": "wide",
+      "label": "Icon 512x512 Wide"
     }
   ],
   "start_url": "/",
