@@ -18,6 +18,9 @@
             <li>Connectivity-independent: Service workers allow them to work offline or on low-quality networks.</li>
             <li>App-like experience: They feel like an app to the user with app-style interactions and navigation.</li>
         </ul>
+        <label for="name-input">Enter Your Name:</label>
+        <input type="text" id="name-input" />
+        <p id="user-greeting">Welcome, <span id="user-name"></span>!</p> <!-- Paragraph to display user's name -->
         <label for="background-select">Select Background Color:</label>
         <select id="background-select">
             <option value="light-blue">Light Blue</option>
@@ -27,6 +30,25 @@
     </div>
 
     <script>
+        // Function to update user greeting with name from Local Storage
+        function updateGreeting() {
+            var userName = localStorage.getItem('name'); // Retrieve name from Local Storage
+            var userGreeting = document.getElementById('user-name');
+            if (userName) {
+                userGreeting.textContent = userName; // Update user greeting with name
+            }
+        }
+
+        // Event listener for input box
+        document.getElementById('name-input').addEventListener('input', function() {
+            var userName = this.value.trim(); // Get user's input and trim whitespace
+            if (userName) {
+                localStorage.setItem('name', userName); // Save name to Local Storage
+            }
+            updateGreeting(); // Update user greeting
+        });
+
+        // Event listener for background change button (unchanged)
         document.getElementById('change-background-btn').addEventListener('click', function() {
             var backgroundSelect = document.getElementById('background-select');
             var selectedOption = backgroundSelect.options[backgroundSelect.selectedIndex].value;
@@ -38,8 +60,8 @@
             }
             document.body.style.backgroundImage = 'url("' + imageUrl + '")';
         });
-    </script>
-    <script>
+
+        // Service worker registration (unchanged)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('service-worker.js')
@@ -51,6 +73,9 @@
                     });
             });
         }
+
+        // Update greeting when page loads
+        window.addEventListener('load', updateGreeting);
     </script>    
 </body>
 </html>
