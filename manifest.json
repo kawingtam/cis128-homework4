@@ -1,0 +1,64 @@
+{
+  "name": "My PWA",
+  "short_name": "PWA Demo",
+  "description": "A description of my Progressive Web Application",
+  "icons": [
+    {
+      "src": "icon48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "icon72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "icon96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "icon144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "icon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-tall.png",
+      "type": "image/png",
+      "sizes": "320x480",
+      "form_factor": "tall"
+    },
+    {
+      "src": "screenshot-wide.png",
+      "type": "image/png",
+      "sizes": "480x320",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-square.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "square"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#007bff",
+  "orientation": "portrait",
+  "prefer_related_applications": false
+}
