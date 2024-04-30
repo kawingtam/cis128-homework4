@@ -54,5 +54,20 @@
   "scope": "/",
   "lang": "en",
   "dir": "ltr",
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "screenshot-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Screenshot 1"
+    },
+    {
+      "src": "screenshot-2.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "label": "Screenshot 2",
+      "form_factor": "wide"
+    }
+  ]
 }
